@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5ddd5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.time {
+    font-size: 0.8em;
+    color: #888;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #25d366;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #128C7E;
+}
+
+    </style>
+</head>
+<body>
+   
+    <div class="chat-container">
+        <div class="messages">
+            <div class="message sent">
+                <p>Hello! How are you?</p>
+                <span class="time">10:00 AM</span>
+            </div>
+            <div class="message received">
+                <p>I'm good, thanks! How about you?</p>
+                <span class="time">10:01 AM</span>
+            </div>
+            <div class="message sent">
+                <p>Doing well, just busy with work.</p>
+                <span class="time">10:02 AM</span>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" placeholder="Type a message..." />
+            <button>Send</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
